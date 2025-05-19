@@ -33,7 +33,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
       <HeroUIProvider>
         <NextThemesProvider {...themeProps}>
           <Toaster position="top-right" />
-          <ReactQueryDevtools initialIsOpen={false} />
+          {/* <ReactQueryDevtools initialIsOpen={false} /> */}
           {children}
         </NextThemesProvider>
       </HeroUIProvider>

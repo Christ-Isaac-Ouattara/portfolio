@@ -3,51 +3,183 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-@font-face {
-  font-family: 'YatraOne';
-  src: url('/fonts/YatraOne-Regular.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ClashDisplay';
-  src: url('/fonts/ClashDisplay-Variable.ttf');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sharpie';
-  src: url('/fonts/Sharpie-Variable.ttf');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Striper';
-  src: url('/fonts/Striper-Regular.otf');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #565656;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 186.71, 97.47%, 65.9%;
+    --accent-foreground: 187.47, 100%, 31.36%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 176 56% 55%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 176 56% 55%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 176 56% 55%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .heading-xl {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter;
+  }
+  
+  .heading-lg {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight;
+  }
+  
+  .heading-md {
+    @apply text-2xl sm:text-3xl font-bold tracking-tight;
+  }
+  
+  .heading-sm {
+    @apply text-xl sm:text-2xl font-semibold tracking-tight;
+  }
+  
+  .body-lg {
+    @apply text-lg leading-relaxed;
+  }
+  
+  .body-md {
+    @apply text-base leading-relaxed;
+  }
+  
+  .body-sm {
+    @apply text-sm leading-relaxed;
+  }
+  
+  .numbered-heading {
+    @apply flex items-center relative  whitespace-nowrap;
+  }
+  
+  .numbered-heading::before {
+    counter-increment: section;
+    content: "0" counter(section) ".";
+    @apply text-accent mr-2 font-mono text-base sm:text-lg font-normal;
+  }
+  
+  .numbered-heading::after {
+    content: "";
+    @apply w-full h-px bg-border ml-4 relative top-0;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+  
+  .translate-z-0 {
+    transform: translateZ(0);
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  background-color: #cac5c5;
-  font-family: 'ClashDisplay', Arial, Helvetica, sans-serif;
+  counter-reset: section;
+}
+
+.counter-reset-nav {
+  counter-reset: nav;
+}
+
+.nav-link::before {
+  counter-increment: nav;
+  content: "0" counter(nav) ".";
+  @apply text-accent mr-1 font-mono text-xs;
+}
+
+@media (max-width: 768px) {
+  .nav-link::before {
+    content: "0" counter(nav);
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.highlight {
+  @apply text-accent;
+}
+
+.link-underline {
+  @apply relative inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-0 h-[1px] bg-accent transition-all duration-300;
+}
+
+.link-underline:hover::after {
+  @apply w-full;
 }

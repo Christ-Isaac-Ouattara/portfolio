@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Providers } from "./providers";
-import { fontSans, geistSans, geistMono } from "@/config/fonts";
-import clsx from "clsx";
+import { fontSans} from "@/config/fonts";
+import { cx } from "@/lib/utils";
+import { JetBrains_Mono } from "next/font/google";
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,11 +21,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='fr' suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning className="scroll-smooth">
       <head>
         <link rel="preload" href={fontSans.style.fontFamily} as="font" />
       </head>
-      <body className={clsx("min-h-screen  bg-black/90 font-sans antialiased", fontSans.variable, geistMono.variable, geistSans.variable)}>
+      <body
+        className={cx(
+          jetbrainsMono.variable,
+          "min-h-screen font-mono antialiased selection:bg-gradient-to-br from-indigo-950 to-slate-900 text-slate-50 dark:from-slate-100 dark:to-indigo-200 dark:text-slate-400 dark:selection:bg-gradient-to-br dark:selection:text-white",
+          "scroll-smooth"
+        )}
+      >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           {children}
         </Providers>
