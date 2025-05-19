@@ -208,7 +208,7 @@ export function ProjectsSection() {
                     : "md:col-start-1 md:text-left"
                 }`}
               >
-                <div className="p-6 md:p-0">
+                <div className="">
                   <p className="text-violet-400 font-mono mb-2">
                     Projet à la Une
                   </p>

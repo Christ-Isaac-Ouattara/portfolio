@@ -1,7 +1,7 @@
 export function Footer() {
   return (
     <footer className="py-6 text-center text-sm text-muted-foreground">
-      <p>Adapté du <a className="link-underline" href="https://github.com/bchiang7/v4" target="_blank" rel="noopener noreferrer"> Portfolio de Brittany Chiang</a></p>
+      <p>Inspiré du <a className="link-underline" href="https://github.com/bchiang7/v4" target="_blank" rel="noopener noreferrer"> Portfolio de Brittany Chiang</a></p>
 
       <div className="mt-2 flex justify-center space-x-4 md:hidden">
         <a
