@@ -1,7 +1,6 @@
-import Home from "@/components/home/content"
-
-const home = () =>{
-  return <Home/>;
+import Resume from "@/components/resume";
+const resume = () =>{
+  return <Resume/>;
 }
 
-export default home;
+export default resume;
