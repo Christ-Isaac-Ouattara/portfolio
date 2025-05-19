@@ -80,15 +80,15 @@ export function ExperienceSection() {
   return (
     <section id="experience" className="section-padding py-32 relative overflow-hidden ">
       {/* Éléments décoratifs */}
-      {/* <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-cyan-500/5 rounded-full blur-3xl"></div>
+      {/* <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-violet-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-indigo-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-cyan-500/10 rounded-full blur-xl"></div> */}
+      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-violet-500/10 rounded-full blur-xl"></div> */}
       
       <div className="section-content max-w-5xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1  text-white rounded-full text-lg font-mono mb-4 numbered-heading">Expérience</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Mon Parcours Professionnel</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 mx-auto"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-violet-500 to-indigo-500 mx-auto"></div>
         </div>
         
         <div className="mt-12 max-w-4xl mx-auto  p-8 ">
@@ -103,7 +103,7 @@ export function ExperienceSection() {
                 <TabsTrigger
                   key={i}
                   value={String(i)}
-                  className="data-[state=active]:text-cyan-400 rounded-r-none data-[state=active]:border-b-2 sm:data-[state=active]:border-b-0 sm:data-[state=active]:border-r-2 data-[state=active]:border-cyan-400 px-4 py-3 w-full whitespace-nowrap text-start justify-start text-white/70 hover:text-white/90 transition-colors"
+                  className="data-[state=active]:text-violet-400 rounded-r-none data-[state=active]:border-b-2 sm:data-[state=active]:border-b-0 sm:data-[state=active]:border-r-2 data-[state=active]:border-violet-400 px-4 py-3 w-full whitespace-nowrap text-start justify-start text-white/70 hover:text-white/90 transition-colors"
                 >
                   {job.company}
                 </TabsTrigger>
@@ -118,7 +118,7 @@ export function ExperienceSection() {
                 >
                   <h3 className="text-xl font-medium mb-1 text-white">
                     {job.title}{" "}
-                    <span className="text-cyan-400">
+                    <span className="text-violet-400">
                       @ <a href={job.url} className="hover:underline transition-all">{job.company}</a>
                     </span>
                   </h3>
@@ -129,7 +129,7 @@ export function ExperienceSection() {
                     {job.duties.map((duty, index) => (
                       <li 
                         key={index} 
-                        className="flex text-white/80 before:content-['▹'] before:text-cyan-400 before:mr-3 before:mt-1 before:text-lg"
+                        className="flex text-white/80 before:content-['▹'] before:text-violet-400 before:mr-3 before:mt-1 before:text-lg"
                       >
                         {duty}
                       </li>

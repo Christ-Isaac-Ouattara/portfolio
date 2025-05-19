@@ -58,9 +58,9 @@ export function AboutSection() {
       className="section-padding  relative overflow-hidden"
     >
       {/* Éléments décoratifs */}
-      {/* <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-r from-cyan-500 via-purple-500 to-indigo-500 opacity-30 transform -skew-y-3"></div> */}
-      {/* <div className="absolute bottom-0 right-0 w-full h-20 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 opacity-30 transform skew-y-3"></div> */}
-      <div className="absolute top-1/4 right-10 w-64 h-64 rounded-full bg-cyan-500/10 blur-3xl"></div>
+      {/* <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-500 opacity-30 transform -skew-y-3"></div> */}
+      {/* <div className="absolute bottom-0 right-0 w-full h-20 bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 opacity-30 transform skew-y-3"></div> */}
+      <div className="absolute top-1/4 right-10 w-64 h-64 rounded-full bg-violet-500/10 blur-3xl"></div>
       <div className="absolute bottom-1/4 left-10 w-64 h-64 rounded-full bg-indigo-500/10 blur-3xl"></div>
 
       <div className="section-content max-w-5xl mx-auto relative z-10">
@@ -71,7 +71,7 @@ export function AboutSection() {
           <h2 className="about-title text-4xl md:text-5xl font-bold text-white mb-4">
             Qui suis-je?
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 mx-auto"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-violet-500 to-indigo-500 mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 ">
@@ -86,7 +86,7 @@ export function AboutSection() {
                   height={500}
                   className="object-cover w-full aspect-square filter grayscale hover:filter-none transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/40 to-indigo-500/40 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-violet-500/40 to-indigo-500/40 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </div>
           </div>
@@ -105,21 +105,21 @@ export function AboutSection() {
                 Aujourd&apos;hui, j&apos;ai eu le privilège de travailler pour{" "}
                 <a
                   href="#"
-                  className="text-cyan-300 font-medium hover:text-cyan-200 link-underline border-cyan-300/30 "
+                  className="text-violet-300 font-medium hover:text-violet-200 link-underline border-violet-300/30 "
                 >
                   une agence de publicité
                 </a>
                 ,{" "}
                 <a
                   href="#"
-                  className="text-cyan-300 font-medium hover:text-cyan-200 link-underline border-cyan-300/30"
+                  className="text-violet-300 font-medium hover:text-violet-200 link-underline border-violet-300/30"
                 >
                   une start-up
                 </a>
                 , et{" "}
                 <a
                   href="#"
-                  className="text-cyan-300 font-medium hover:text-cyan-200 link-underline border-cyan-300/30"
+                  className="text-violet-300 font-medium hover:text-violet-200 link-underline border-violet-300/30"
                 >
                   une grande entreprise
                 </a>
@@ -127,7 +127,7 @@ export function AboutSection() {
                 accessibles chez{" "}
                 <a
                   href="#"
-                  className="text-cyan-300 font-medium hover:text-cyan-200 link-underline border-cyan-300/30"
+                  className="text-violet-300 font-medium hover:text-violet-200 link-underline border-violet-300/30"
                 >
                   Studio Numérique
                 </a>
@@ -136,7 +136,7 @@ export function AboutSection() {
 
               <div className="about-skills mt-8">
                 <h3 className="text-white font-semibold mb-4 flex items-center">
-                  <span className="inline-block w-6 h-0.5 bg-gradient-to-r from-cyan-500 to-indigo-500 mr-3"></span>
+                  <span className="inline-block w-6 h-0.5 bg-gradient-to-r from-violet-500 to-indigo-500 mr-3"></span>
                   Mes compétences techniques
                 </h3>
 

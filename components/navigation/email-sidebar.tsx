@@ -23,11 +23,11 @@ export function EmailSidebar() {
     <div className="fixed bottom-0 right-6 md:right-12 z-10 hidden md:block">
       <div className="flex flex-col items-center after:content-[''] after:w-px after:h-24 after:bg-foreground/30 after:mx-auto">
         <a
-          href="mailto:hello@example.com"
+          href="mailto:ouattaraisaacpro@gmail.com"
           className="email-link vertical-text mb-6 text-muted-foreground hover:text-accent transition-colors"
           style={{ writingMode: "vertical-rl" }}
         >
-          hello@example.com
+          ouattaraisaacpro@gmail.com
         </a>
       </div>
     </div>

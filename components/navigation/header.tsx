@@ -69,7 +69,7 @@ export function Header() {
     )}>
       <div className="flex items-center justify-between">
         <Link href="/" className="logo font-bold text-2xl text-accent">
-          KW
+          <img src="/logo.png" alt="Logo" className="w-16 h-8" />
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">

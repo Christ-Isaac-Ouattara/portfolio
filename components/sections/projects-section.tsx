@@ -156,9 +156,9 @@ export function ProjectsSection() {
       className="section-padding py-32  relative overflow-hidden"
     >
       {/* Éléments décoratifs */}
-      {/* <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-r from-cyan-500/10 via-indigo-500/10 to-cyan-500/10"></div> */}
-      {/* <div className="absolute bottom-0 right-0 w-full h-40 bg-gradient-to-r from-indigo-500/10 via-cyan-500/10 to-indigo-500/10"></div> */}
-      <div className="absolute top-1/3 right-1/4 w-72 h-72 rounded-full bg-cyan-500/5 blur-3xl"></div>
+      {/* <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-r from-violet-500/10 via-indigo-500/10 to-violet-500/10"></div> */}
+      {/* <div className="absolute bottom-0 right-0 w-full h-40 bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-indigo-500/10"></div> */}
+      <div className="absolute top-1/3 right-1/4 w-72 h-72 rounded-full bg-violet-500/5 blur-3xl"></div>
       <div className="absolute bottom-1/3 left-1/4 w-72 h-72 rounded-full bg-indigo-500/5 blur-3xl"></div>
 
       <div className="section-content max-w-6xl mx-auto relative z-10">
@@ -169,7 +169,7 @@ export function ProjectsSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Mes Créations Récentes
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 mx-auto"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-violet-500 to-indigo-500 mx-auto"></div>
         </div>
 
         {/* Featured Projects */}
@@ -177,7 +177,7 @@ export function ProjectsSection() {
           {featuredProjects.map((project, i) => (
             <div
               key={i}
-              className={`featured-project relative grid grid-cols-12 items-center gap-4 ${
+              className={`featured-project relative md:grid grid-cols-12 items-center gap-4 ${
                 i % 2 === 0 ? "" : "md:text-right"
               }`}
             >
@@ -209,7 +209,7 @@ export function ProjectsSection() {
                 }`}
               >
                 <div className="p-6 md:p-0">
-                  <p className="text-cyan-400 font-mono mb-2">
+                  <p className="text-violet-400 font-mono mb-2">
                     Projet à la Une
                   </p>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
@@ -217,7 +217,7 @@ export function ProjectsSection() {
                       href={project.external || project.github || "#"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-cyan-300 transition-colors"
+                      className="hover:text-violet-300 transition-colors"
                     >
                       {project.title}
                     </Link>
@@ -235,7 +235,7 @@ export function ProjectsSection() {
                     {project.tech.map((tech, index) => (
                       <li
                         key={index}
-                        className="text-sm font-mono text-cyan-300"
+                        className="text-sm font-mono text-violet-300"
                       >
                         {tech}
                       </li>
@@ -252,7 +252,7 @@ export function ProjectsSection() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white/70 hover:text-cyan-400 transition-colors transform hover:scale-110 duration-300"
+                        className="text-white/70 hover:text-violet-400 transition-colors transform hover:scale-110 duration-300"
                         aria-label="GitHub Repository"
                       >
                         <Github size={22} />
@@ -264,7 +264,7 @@ export function ProjectsSection() {
                         href={project.external}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white/70 hover:text-cyan-400 transition-colors transform hover:scale-110 duration-300"
+                        className="text-white/70 hover:text-violet-400 transition-colors transform hover:scale-110 duration-300"
                         aria-label="External Link"
                       >
                         <ExternalLink size={22} />
@@ -285,7 +285,7 @@ export function ProjectsSection() {
             </h3>
             <a
               href="#"
-              className="inline-block text-cyan-400 mb-10 border-b border-cyan-400/30 hover:border-cyan-400 transition-colors font-mono"
+              className="inline-block text-violet-400 mb-10 border-b border-violet-400/30 hover:border-violet-400 transition-colors font-mono"
             >
               voir les archives
             </a>
@@ -300,7 +300,7 @@ export function ProjectsSection() {
                 <CardHeader className="p-6 pb-0">
                   <div className="flex justify-between items-center mb-6">
                     <Folder
-                      className="text-cyan-400 group-hover:text-cyan-300 transition-colors"
+                      className="text-violet-400 group-hover:text-violet-300 transition-colors"
                       size={36}
                     />
                     <div className="flex gap-3">
@@ -309,7 +309,7 @@ export function ProjectsSection() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-white/60 hover:text-cyan-400 transition-colors transform hover:scale-110 duration-300"
+                          className="text-white/60 hover:text-violet-400 transition-colors transform hover:scale-110 duration-300"
                           aria-label="GitHub Repository"
                         >
                           <Github size={20} />
@@ -321,7 +321,7 @@ export function ProjectsSection() {
                           href={project.external}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-white/60 hover:text-cyan-400 transition-colors transform hover:scale-110 duration-300"
+                          className="text-white/60 hover:text-violet-400 transition-colors transform hover:scale-110 duration-300"
                           aria-label="External Link"
                         >
                           <ExternalLink size={20} />
@@ -329,7 +329,7 @@ export function ProjectsSection() {
                       )}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-white group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-xl font-bold mb-2 text-white group-hover:text-violet-300 transition-colors">
                     <a
                       href={project.external || project.github || "#"}
                       target="_blank"
@@ -349,7 +349,7 @@ export function ProjectsSection() {
                     {project.tech.map((tech, index) => (
                       <span
                         key={index}
-                        className="text-xs font-mono text-cyan-300/80"
+                        className="text-xs font-mono text-violet-300/80"
                       >
                         {tech}
                       </span>
@@ -362,7 +362,7 @@ export function ProjectsSection() {
 
           <div className="flex justify-center mt-16">
             <Button
-              className="bg-transparent hover:bg-cyan-500/10 text-cyan-400 border-2 border-cyan-400 rounded-full px-8 py-6 font-medium transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 hover:-translate-y-1"
+              className="bg-transparent hover:bg-violet-500/10 text-violet-400 border-2 border-violet-400 rounded-full px-8 py-6 font-medium transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/20 hover:-translate-y-1"
               asChild
             >
               <a href="#">Voir Plus de Projets</a>
