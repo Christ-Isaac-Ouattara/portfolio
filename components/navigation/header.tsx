@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
 import { MobileMenu } from "./mobile-menu";
 
 const navItems = [
-  { name: "About", href: "#about" },
+  { name: "A propos", href: "#about" },
   { name: "Experience", href: "#experience" },
-  { name: "Work", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Jobs", href: "#projects" },
+  { name: "Contacts", href: "#contact" },
 ];
 
 export function Header() {

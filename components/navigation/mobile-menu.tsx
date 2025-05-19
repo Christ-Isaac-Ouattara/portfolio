@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import {  useEffect } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { cn } from "@/lib/utils";
@@ -101,8 +101,8 @@ export function MobileMenu({ isOpen, onToggle, activeSection, navItems }: Mobile
             className="mobile-nav-item mt-4 border-accent text-accent hover:bg-accent/10"
             asChild
           >
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-              Resume
+            <a href="/cv-isaac-ouattara.pdf" target="_blank" rel="noopener noreferrer">
+              CV
             </a>
           </Button>
         </nav>

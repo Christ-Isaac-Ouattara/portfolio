@@ -76,7 +76,7 @@ export function ContactSection() {
       <div className="section-content max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-12">
           <span className="numbered-heading inline-block pr-1 px-4 py-1 text-white rounded-full text-lg font-mono mb-4">
-            À propos
+            Contacts
           </span>{" "}
           <h2 className="contact-title text-4xl md:text-5xl font-bold text-white mb-4">
             Et Maintenant ?
