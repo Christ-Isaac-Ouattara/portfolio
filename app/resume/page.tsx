@@ -7,13 +7,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowLeft, Mail, MapPin, Phone, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
+import { experiences } from "@/data/resumeData";
 // Définition des sections du CV
 const sections = [
-  { id: "summary", title: "Summary" },
+  { id: "summary", title: "A propos " },
   { id: "experience", title: "Experience" },
   { id: "skills", title: "Compétences" },
-  { id: "education", title: "Education" },
+  { id: "education", title: "Scolarité" },
   // { id: "awards", title: "Awards" },
   { id: "projects", title: "Projets" },
   // { id: "contact", title: "Contact" },
@@ -105,11 +105,11 @@ export default function ResumePage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Bouton retour - fixe en haut */}
-      <div className="fixed top-0 left-0 w-full bg-background/90 backdrop-blur-sm z-30 p-4 md:p-6 shadow-sm">
-        <Button variant="ghost" size="sm" className="hover:text-accent" asChild>
+      <div className="fixed top-0 left-0 w-full bg-background/90 backdrop-blur-sm md:z-30 z-40 p-4 md:p-6 shadow-sm">
+        <Button variant="ghost" size="sm" className="" asChild>
           <Link href="/">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Portfolio
+            Retour au Portfolio
           </Link>
         </Button>
       </div>
@@ -142,7 +142,7 @@ export default function ResumePage() {
         </div>
 
         {/* Navigation mobile - visible uniquement sur mobile */}
-        <div className="md:hidden fixed top-16 left-0 w-full z-20 bg-background/90 backdrop-blur-sm border-b overflow-x-auto">
+        {/* <div className="md:hidden fixed top-16 left-0 w-full z-20 bg-background/90 backdrop-blur-sm border-b overflow-x-auto">
           <div className="flex p-2">
             {sections.map((section, index) => (
               <button
@@ -159,7 +159,7 @@ export default function ResumePage() {
               </button>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Contenu principal */}
         <div
@@ -169,7 +169,9 @@ export default function ResumePage() {
           {/* Header du CV */}
           <header className="resume-header space-y-4 mb-12">
             <h1 className="heading-xl">OUATTARA ISAAC</h1>
-            <h2 className="text-xl text-muted-foreground">Développeur Web</h2>
+            <h2 className="text-xl text-muted-foreground">
+              Développeur FullStack
+            </h2>
             <div className="flex flex-wrap gap-4 text-muted-foreground">
               <span className="flex items-center">
                 <MapPin className="mr-2 h-4 w-4" />
@@ -188,10 +190,8 @@ export default function ResumePage() {
                 <Phone className="mr-2 h-4 w-4" />
                 <a href="tel:+2250100978715" className="hover:text-accent">
                   +225 01 00 97 87 15
-                </a>
-                {" "}
-                /
-                {" "}
+                </a>{" "}
+                /{" "}
                 <a href="tel:+2250702265970" className="hover:text-accent">
                   +225 07 02 26 59 70
                 </a>
@@ -207,15 +207,19 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.summary = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[72px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-10">
-                Summary
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6  bg-background/90 backdrop-blur-sm py-2 z-30">
+                A propos de moi
               </h2>
               <p className="text-muted-foreground">
-                Software Engineer specializing in building exceptional digital
-                experiences. Currently focused on building accessible,
-                human-centered products at Upstatement. Proficient in
-                JavaScript, TypeScript, React, and Node.js with a strong
-                foundation in web technologies and user experience design.
+                Développeur fullstack web passionné et créatif, je suis
+                spécialisé dans la création de sites web et d&apos;applications
+                web accessibles et performantes. J&apos;ai une solide expérience
+                en développement web avec une expertise en JavaScript,
+                TypeScript, React, Node.js et CSS. J&apos;ai également une
+                solide expérience en conception d&apos;interfaces utilisateur et
+                d&apos;expérience utilisateur. Je suis également un développeur
+                web avec une forte capacité à comprendre et à intégrer des
+                technologies et des frameworks modernes.
               </p>
             </section>
 
@@ -225,54 +229,58 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.experience = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-6 sticky top-[72px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-10">
-                Experience
+              <h2 className="heading-sm mb-6 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
+                Expérience professionnelle
               </h2>
               <div className="space-y-8">
-                <div className="grid gap-2">
-                  <div className="flex justify-between items-start">
-                    <h3 className="font-medium">Lead Engineer @ Upstatement</h3>
-                    <span className="text-muted-foreground text-sm">
-                      2022 - Present
-                    </span>
-                  </div>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                    <li>
-                      Lead the development of high-impact web applications for
-                      clients including Harvard Business School and Evenbrite
-                    </li>
-                    <li>
-                      Architect and implement scalable technical solutions that
-                      meet business requirements
-                    </li>
-                    <li>
-                      Mentor junior developers and contribute to team knowledge
-                      sharing initiatives
-                    </li>
-                  </ul>
-                </div>
+                <div className="grid gap-2 ">
+                  {experiences.map((experience, index) => (
+                    <div
+                      key={index}
+                      className="flex w-full flex-col md:flex-row justify-between items-start mb-12"
+                    >
+                      <span className="text-muted-foreground text-sm md:w-[20%]">
+                        {experience.period}
+                      </span>
+                      <div className="md:ml-4 w-full md:w-[80%]">
+                        <h3 className="font-medium">
+                          <a
+                            href={experience.companyLink}
+                            className="hover:text-accent"
+                          >
+                            {experience.position} · @{experience.company}
+                          </a>
+                        </h3>
 
-                <div className="grid gap-2">
-                  <div className="flex justify-between items-start">
-                    <h3 className="font-medium">UI Engineer @ Apple</h3>
-                    <span className="text-muted-foreground text-sm">
-                      2020 - 2021
-                    </span>
-                  </div>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                    <li>
-                      Developed interactive web applications for Apple Music
-                      using Ember and SCSS
-                    </li>
-                    <li>
-                      Built and shipped the Apple Music Extension for Facebook
-                      Messenger
-                    </li>
-                    <li>
-                      Contributed to MusicKit JS, enabling Apple Music streaming
-                      in web apps
-                    </li>
-                  </ul>
+                        {experience.projects.map((project, projectIndex) => (
+                          <div key={projectIndex} className="mb-6">
+                            <p className="text-muted-foreground before:content-['▹'] before:text-accent before:mr-2">
+                              <span className="font-mono text-lg">
+                                <a
+                                  href={project.link}
+                                  className="hover:text-accent"
+                                >
+                                  {project.name}
+                                </a>
+                              </span>{" "}
+                              <br />
+                              <span className="">{project.description}</span>
+                            </p>
+                            <div className="flex flex-wrap gap-2 mt-2">
+                              {project.technologies.map((tech, techIndex) => (
+                                <span
+                                  key={techIndex}
+                                  className="text-violet-400 py-1 px-2 rounded-full bg-violet-400/40 font-mono text-sm"
+                                >
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </section>
@@ -283,35 +291,40 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.skills = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[72px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-10">
-                Skills
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
+                Compétences
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <div>
-                  <h3 className="font-medium mb-2">Languages</h3>
+                  <h3 className="font-medium mb-2">Langage de programmation</h3>
                   <ul className="text-muted-foreground space-y-1">
                     <li>JavaScript (ES6+)</li>
                     <li>TypeScript</li>
-                    <li>HTML</li>
-                    <li>CSS/Sass</li>
+                    <li> HTML & CSS</li>
+                    <li>PHP</li>
+                    <li>MongoDB</li>
+                    <li>SQL</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-medium mb-2">Frameworks</h3>
+                  <h3 className="font-medium mb-2">Librairiies et frameworks</h3>
                   <ul className="text-muted-foreground space-y-1">
                     <li>React</li>
                     <li>Next.js</li>
                     <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>Adonis.js</li>
                     <li>WordPress</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-medium mb-2">Tools</h3>
+                  <h3 className="font-medium mb-2">Outils et plateformes</h3>
                   <ul className="text-muted-foreground space-y-1">
                     <li>Git & GitHub</li>
                     <li>Chrome DevTools</li>
-                    <li>Postman</li>
-                    <li>MongoDB</li>
+                    <li>Postman & Insomnia</li>
+                    <li>Heroku & Hostinger</li>
+                    <li>Netlify & Vercel</li>
                   </ul>
                 </div>
               </div>
@@ -323,27 +336,27 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.education = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-6 sticky top-[72px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-10">
-                Education
+              <h2 className="heading-sm mb-6 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
+                Scolarité
               </h2>
               <div className="grid gap-2">
                 <div className="flex justify-between items-start">
-                  <h3 className="font-medium">Northeastern University</h3>
+                  <h3 className="font-medium">Institut Universitaire d’Abidjan</h3>
                   <span className="text-muted-foreground text-sm">
-                    2016 - 2020
+                  2020 — 2023
                   </span>
                 </div>
-                <p className="text-muted-foreground">BS in Computer Science</p>
+                <p className="text-muted-foreground">Licence en Méthode Informatique Appliquée à la Gestion d’Entreprise</p>
               </div>
             </section>
 
             {/* Awards & Recognition */}
-            <section
+            {/* <section
               id="awards"
               ref={(el) => (sectionRefs.current.awards = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[72px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-10">
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
                 Awards & Recognition
               </h2>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
@@ -351,7 +364,7 @@ export default function ResumePage() {
                 <li>Winner of Northeastern's Entrepreneurship Competition</li>
                 <li>1st Place - HackBeanpot 2019</li>
               </ul>
-            </section>
+            </section> */}
 
             {/**Projects */}
 
@@ -360,7 +373,7 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.projects = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[72px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-10">
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
                 {" "}
                 Projects{" "}
               </h2>
@@ -393,12 +406,13 @@ export default function ResumePage() {
                     className="w-52 h-20 rounded-md object-cover transition-transform duration-700 hover:scale-110"
                   />
                   <div className="ml-4">
-                  <div className="flex justify-between items-start">
-                    <h3 className="font-medium">Project 2</h3>
-                    <span className="text-muted-foreground text-sm">
-                      2022 - Present
-                    </span>
-                    </div>                    <p className="text-muted-foreground">
+                    <div className="flex justify-between items-start">
+                      <h3 className="font-medium">Project 2</h3>
+                      <span className="text-muted-foreground text-sm">
+                        2022 - Present
+                      </span>
+                    </div>{" "}
+                    <p className="text-muted-foreground">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Quisque in pretium turpis. Nullam eget metus eu erat
                       feugiat aliquet.
@@ -414,8 +428,8 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.otherProjects = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[72px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-10">
-                Other Noteworthy Projects
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
+                Autres Projets notables
               </h2>
               <div className="grid gap-2">
                 <div className="flex justify-between items-start">
@@ -425,12 +439,13 @@ export default function ResumePage() {
                     className="w-52 h-20 rounded-md object-cover transition-transform duration-700 hover:scale-110"
                   />
                   <div className="ml-4">
-                  <div className="flex justify-between items-start">
-                    <h3 className="font-medium">Project 3</h3>
-                    <span className="text-muted-foreground text-sm">
-                      2022 - Present
-                    </span>
-                    </div>                    <p className="text-muted-foreground">
+                    <div className="flex justify-between items-start">
+                      <h3 className="font-medium">Project 3</h3>
+                      <span className="text-muted-foreground text-sm">
+                        2022 - Present
+                      </span>
+                    </div>{" "}
+                    <p className="text-muted-foreground">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Quisque in pretium turpis. Nullam eget metus eu erat
                       feugiat aliquet.
@@ -440,12 +455,12 @@ export default function ResumePage() {
               </div>
             </section>
             {/* Contact */}
-            <section
+            {/* <section
               id="contact"
               ref={(el) => (sectionRefs.current.contact = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[72px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-10">
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
                 Contact
               </h2>
               <div className="grid gap-2">
@@ -471,7 +486,7 @@ export default function ResumePage() {
                   Phone number for emergencies
                 </p>
               </div>
-            </section>
+            </section> */}
           </div>
         </div>
       </div>

@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
 import { MobileMenu } from "./mobile-menu";
 
 const navItems = [
-  { name: "About", href: "#about" },
+  { name: "A propos", href: "#about" },
   { name: "Experience", href: "#experience" },
-  { name: "Work", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Projets", href: "#projects" },
+  { name: "Contacts", href: "#contact" },
 ];
 
 export function Header() {
@@ -96,8 +96,8 @@ export function Header() {
               className="resume-button border-accent text-accent hover:bg-accent/10"
               asChild
             >
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                Resume
+              <a href="/cv-isaac-ouattara.pdf" target="_blank" rel="noopener noreferrer">
+                CV
               </a>
             </Button>
           </nav>
