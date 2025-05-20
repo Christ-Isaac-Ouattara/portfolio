@@ -1,6 +1,6 @@
 "use client";
 
-import {  useEffect } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { cn } from "@/lib/utils";
@@ -42,6 +42,7 @@ export function MobileMenu({ isOpen, onToggle, activeSection, navItems }: Mobile
 
   return (
     <div className="md:hidden">
+      {/* Hamburger button */}
       <button
         onClick={onToggle}
         className="w-10 h-10 relative focus:outline-none z-50"
@@ -67,45 +68,49 @@ export function MobileMenu({ isOpen, onToggle, activeSection, navItems }: Mobile
         />
       </button>
 
+      {/* Mobile menu overlay */}
       <div
         className={cn(
-          "fixed inset-0 z-40 flex flex-col items-center justify-center bg-background transition-opacity duration-300",
+          "fixed inset-0 z-40 bg-background transition-all duration-300",
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         )}
       >
-        <nav className="flex flex-col items-center space-y-6">
-          <ol className="flex flex-col items-center space-y-6">
-            {navItems.map((item, index) => (
-              <li key={item.href} className="mobile-nav-item nav-link text-center">
-                <Link
-                  href={item.href}
-                  onClick={closeMenu}
-                  className={cn(
-                    "text-lg font-medium transition-colors hover:text-accent",
-                    activeSection === item.href
-                      ? "text-accent"
-                      : "text-muted-foreground"
-                  )}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ol>
+        {/* Menu content container with fixed height and scrolling */}
+        <div className="flex flex-col items-center justify-center h-full w-full overflow-auto py-16 px-6">
+          <nav className="flex flex-col items-center justify-center w-full max-w-sm">
+            <ol className="flex flex-col items-center space-y-6 w-full counter-reset-nav">
+              {navItems.map((item) => (
+                <li key={item.href} className="mobile-nav-item nav-link text-center w-full">
+                  <Link
+                    href={item.href}
+                    onClick={closeMenu}
+                    className={cn(
+                      "text-lg font-medium transition-colors hover:text-accent block w-full py-2",
+                      activeSection === item.href
+                        ? "text-accent"
+                        : "text-muted-foreground"
+                    )}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ol>
 
-          <Button
-            variant="outline"
-            size="sm"
-            className="mobile-nav-item mt-4 border-accent text-accent hover:bg-accent/10"
-            asChild
-          >
-            <a href="/cv-isaac-ouattara.pdf" target="_blank" rel="noopener noreferrer">
-              CV
-            </a>
-          </Button>
-        </nav>
+            <Button
+              variant="outline"
+              size="lg"
+              className="mobile-nav-item mt-8 border-accent text-accent hover:bg-accent/10 w-full"
+              asChild
+            >
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                CV
+              </a>
+            </Button>
+          </nav>
+        </div>
       </div>
     </div>
   );

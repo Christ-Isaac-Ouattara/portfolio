@@ -102,7 +102,7 @@ export function HeroSection() {
                 asChild
                 variant="outline"
               >
-                <a href="#contact">Me contacter</a>
+                <a href="/resume">Visualiser mon cv</a>
               </Button>
             </div>
 
