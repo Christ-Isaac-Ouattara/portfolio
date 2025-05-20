@@ -190,11 +190,12 @@ export default function ResumePage() {
                 <Phone className="mr-2 h-4 w-4" />
                 <a href="tel:+2250100978715" className="hover:text-accent">
                   +225 01 00 97 87 15
-                </a>{" "}
+                </a>
+                {/* {" "}
                 /{" "}
                 <a href="tel:+2250702265970" className="hover:text-accent">
                   +225 07 02 26 59 70
-                </a>
+                </a> */}
               </span>
             </div>
           </header>
