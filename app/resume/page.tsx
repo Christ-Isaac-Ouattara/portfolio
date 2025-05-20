@@ -212,15 +212,10 @@ export default function ResumePage() {
                 A propos de moi
               </h2>
               <p className="text-muted-foreground">
-                Développeur fullstack web passionné et créatif, je suis
-                spécialisé dans la création de sites web et d&apos;applications
-                web accessibles et performantes. J&apos;ai une solide expérience
-                en développement web avec une expertise en JavaScript,
-                TypeScript, React, Node.js et CSS. J&apos;ai également une
-                solide expérience en conception d&apos;interfaces utilisateur et
-                d&apos;expérience utilisateur. Je suis également un développeur
-                web avec une forte capacité à comprendre et à intégrer des
-                technologies et des frameworks modernes.
+                Développeur web fullstack passionné et créatif, je conçois des sites et applications web accessibles, performants et centrés sur l’utilisateur.
+Fort d’une solide expérience en développement frontend et backend, je maîtrise les technologies modernes telles que JavaScript, TypeScript, Node.js et React. 
+Je porte une attention particulière à la conception d’interfaces intuitives et à l’optimisation de l’expérience utilisateur.
+Curieux et rigoureux, j’ai la capacité d’intégrer rapidement de nouveaux outils et frameworks pour répondre efficacement aux besoins des projets.
               </p>
             </section>
 
