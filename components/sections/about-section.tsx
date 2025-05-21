@@ -92,46 +92,45 @@ export function AboutSection() {
           </div>
           <div className="md:col-span-2 space-y-4">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 shadow-xl">
-              <p className="about-text text-white/90 leading-relaxed mb-6 ">
-                Bonjour ! Je m&apos;appelle Isaac et je suis passionné par la
-                création d&apos;applications web innovantes. Mon intérêt pour le
-                développement web a commencé en 2012 lorsque j&apos;ai décidé de
-                personnaliser des thèmes Tumblr — il s&apos;avère que créer un
-                bouton de reblog personnalisé m&apos;a beaucoup appris sur HTML
-                et CSS !
+              <p className="about-text text-white/90 text-sm leading-relaxed mb-6 ">
+                <span className="font-bold">
+                  Bonjour ! Je m’appelle Ouattara Nafiralo Christ Isaac Konan et
+                  je suis passionné par la création d’applications web
+                  innovantes.
+                </span>
+                <br />
+                Mon aventure dans le développement web a commencé en 2020, au
+                cœur de la crise sanitaire, lorsque j’ai découvert un véritable
+                intérêt pour l’informatique en réalisant mes premières pages en
+                HTML et CSS. Depuis, ma passion n’a cessé de croître, me
+                poussant naturellement à poursuivre des études en informatique.
               </p>
 
-              <p className="about-text text-white/90 leading-relaxed mb-6 ">
-                Aujourd&apos;hui, j&apos;ai eu le privilège de travailler pour{" "}
-                <a
-                  href="#"
-                  className="text-violet-300 font-medium hover:text-violet-200 link-underline border-violet-300/30 "
-                >
-                  une agence de publicité
-                </a>
-                ,{" "}
+              <p className="about-text text-white/90 text-sm leading-relaxed mb-6 ">
+                Après l’obtention de mon diplôme, j’ai rejoint{" "}
                 <a
                   href="#"
                   className="text-violet-300 font-medium hover:text-violet-200 link-underline border-violet-300/30"
                 >
                   une start-up
-                </a>
-                , et{" "}
+                </a>{" "}
+                nouvellement créée pour y effectuer un stage. Cette expérience a
+                marqué le début de mon parcours professionnel. Très vite, j’ai
+                été embauché en CDI, ce qui m’a permis de m’investir pleinement
+                dans des projets concrets. Travailler dans un environnement en
+                constante évolution, avec des délais serrés et des objectifs
+                ambitieux, m’a appris à gérer la pression, à être réactif et à
+                m’adapter rapidement. Aujourd’hui, je mets mes compétences au
+                service de{" "}
                 <a
                   href="#"
                   className="text-violet-300 font-medium hover:text-violet-200 link-underline border-violet-300/30"
                 >
-                  une grande entreprise
+                  XXX
                 </a>
-                . Actuellement, je me concentre sur la création de produits
-                accessibles chez{" "}
-                <a
-                  href="#"
-                  className="text-violet-300 font-medium hover:text-violet-200 link-underline border-violet-300/30"
-                >
-                  Studio Numérique
-                </a>
-                .
+                , où je me concentre sur la conception de sites internet et
+                d’applications web modernes, performants et centrés sur
+                l’utilisateur.
               </p>
 
               <div className="about-skills mt-8">

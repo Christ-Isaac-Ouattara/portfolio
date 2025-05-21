@@ -4,7 +4,17 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowLeft, Mail, MapPin, Phone, ChevronRight } from "lucide-react";
+import {
+  ArrowLeft,
+  Mail,
+  MapPin,
+  Phone,
+  ChevronRight,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Github,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { experiences } from "@/data/resumeData";
@@ -102,10 +112,31 @@ export default function ResumePage() {
     }
   };
 
+  const gradientRef = useRef<HTMLDivElement>(null);
+
+  // Animation du gradient qui suit le curseur
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!gradientRef.current) return;
+
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+
+      gradientRef.current.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(79, 70, 229, 0.15) 0%, rgba(0, 0, 0, 0) 50%)`;
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <div
+        ref={gradientRef}
+        className="fixed inset-0 z-0 pointer-events-none"
+      ></div>
       {/* Bouton retour - fixe en haut */}
-      <div className="fixed top-0 left-0 w-full bg-background/90 backdrop-blur-sm md:z-30 z-40 p-4 md:p-6 shadow-sm">
+      <div className="fixed top-0 left-0 w-full  bg-background/90 backdrop-blur-sm md:z-30 z-40 p-4 md:p-6 shadow-sm">
         <Button variant="ghost" size="sm" className="" asChild>
           <Link href="/">
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -138,11 +169,57 @@ export default function ResumePage() {
                 )}
               </button>
             ))}
+            <ul className="flex space-x-6 px-4">
+              <li className="social-icon">
+                <a
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                  aria-label="GitHub"
+                >
+                  <Github size={20} />
+                </a>
+              </li>
+              <li className="social-icon">
+                <a
+                  href="https://linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={20} />
+                </a>
+              </li>
+              <li className="social-icon">
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                  aria-label="Twitter"
+                >
+                  <Twitter size={20} />
+                </a>
+              </li>
+              <li className="social-icon">
+                <a
+                  href="https://instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={20} />
+                </a>
+              </li>
+            </ul>
           </nav>
         </div>
 
         {/* Navigation mobile - visible uniquement sur mobile */}
-        {/* <div className="md:hidden fixed top-16 left-0 w-full z-20 bg-background/90 backdrop-blur-sm border-b overflow-x-auto">
+        {/* <div className="md:hidden fixed top-16 left-0 w-full z-20 md:bg-transparent bg-background/90 backdrop-blur-sm border-b overflow-x-auto">
           <div className="flex p-2">
             {sections.map((section, index) => (
               <button
@@ -180,10 +257,10 @@ export default function ResumePage() {
               <span className="flex items-center">
                 <Mail className="mr-2 h-4 w-4" />
                 <a
-                  href="mailto:ouattaranafiralopro@gmail.com"
+                  href="mailto:ouattaraisaacpro@gmail.com"
                   className="hover:text-accent"
                 >
-                  ouattaranafiralopro@gmail.com
+                  ouattaraisaacpro@gmail.com
                 </a>
               </span>
               <span className="flex items-center">
@@ -208,7 +285,7 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.summary = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6  bg-background/90 backdrop-blur-sm py-2 z-30">
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6   md:bg-transparent bg-background/90 backdrop-blur-sm py-2 z-30">
                 A propos de moi
               </h2>
               <p className="text-muted-foreground">
@@ -230,7 +307,7 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.experience = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-6 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
+              <h2 className="heading-sm mb-6 sticky top-[65px] md:top-6 md:bg-transparent bg-background/90 backdrop-blur-sm py-2 z-30">
                 Expérience professionnelle
               </h2>
               <div className="space-y-8">
@@ -292,7 +369,7 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.skills = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 md:bg-transparent bg-background/90 backdrop-blur-sm py-2 z-30">
                 Compétences
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -308,7 +385,9 @@ export default function ResumePage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-medium mb-2">Librairiies et frameworks</h3>
+                  <h3 className="font-medium mb-2">
+                    Librairiies et frameworks
+                  </h3>
                   <ul className="text-muted-foreground space-y-1">
                     <li>React</li>
                     <li>Next.js</li>
@@ -337,17 +416,22 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.education = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-6 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
+              <h2 className="heading-sm mb-6 sticky top-[65px] md:top-6 md:bg-transparent bg-background/90 backdrop-blur-sm py-2 z-30">
                 Scolarité
               </h2>
               <div className="grid gap-2">
                 <div className="flex justify-between items-start">
-                  <h3 className="font-medium">Institut Universitaire d’Abidjan</h3>
+                  <h3 className="font-medium">
+                    Institut Universitaire d’Abidjan
+                  </h3>
                   <span className="text-muted-foreground text-sm">
-                  2020 — 2023
+                    2020 — 2023
                   </span>
                 </div>
-                <p className="text-muted-foreground">Licence en Méthode Informatique Appliquée à la Gestion d’Entreprise</p>
+                <p className="text-muted-foreground">
+                  Licence en Méthode Informatique Appliquée à la Gestion
+                  d’Entreprise
+                </p>
               </div>
             </section>
 
@@ -357,7 +441,7 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.awards = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 md:bg-transparent bg-background/90 backdrop-blur-sm py-2 z-30">
                 Awards & Recognition
               </h2>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
@@ -374,7 +458,7 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.projects = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 md:bg-transparent bg-background/90 backdrop-blur-sm py-2 z-30">
                 {" "}
                 Projects{" "}
               </h2>
@@ -382,7 +466,7 @@ export default function ResumePage() {
               <div className="grid gap-2">
                 <div className="flex justify-between items-start">
                   <img
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    src="https://images.unsplash.com/photo-1537884944318-390069bb8665"
                     alt="Project 2"
                     className="w-52 h-20 rounded-md object-cover transition-transform duration-700 hover:scale-110"
                   />
@@ -402,7 +486,7 @@ export default function ResumePage() {
                 </div>
                 <div className="flex justify-between items-start">
                   <img
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    src="https://images.unsplash.com/photo-1537884944318-390069bb8665"
                     alt="Project 1"
                     className="w-52 h-20 rounded-md object-cover transition-transform duration-700 hover:scale-110"
                   />
@@ -429,13 +513,13 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.otherProjects = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 md:bg-transparent bg-background/90 backdrop-blur-sm py-2 z-30">
                 Autres Projets notables
               </h2>
               <div className="grid gap-2">
                 <div className="flex justify-between items-start">
                   <img
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    src="https://images.unsplash.com/photo-1537884944318-390069bb8665"
                     alt="Project 3"
                     className="w-52 h-20 rounded-md object-cover transition-transform duration-700 hover:scale-110"
                   />
@@ -461,14 +545,14 @@ export default function ResumePage() {
               ref={(el) => (sectionRefs.current.contact = el)}
               className="scroll-mt-24"
             >
-              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 bg-background/90 backdrop-blur-sm py-2 z-30">
+              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 md:bg-transparent bg-background/90 backdrop-blur-sm py-2 z-30">
                 Contact
               </h2>
               <div className="grid gap-2">
                 <div className="flex justify-between items-start">
                   <h3 className="font-medium">Email</h3>
                   <span className="text-muted-foreground text-sm">
-                    ouattaranafiralopro@gmail.com
+                    ouattaraisaacpro@gmail.com
                   </span>
                 </div>
                 <p className="text-muted-foreground">

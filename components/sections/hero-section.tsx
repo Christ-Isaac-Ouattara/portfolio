@@ -80,9 +80,9 @@ export function HeroSection() {
               chez{" "}
               <a
                 href="#"
-                className="text-violet-400 hover:text-violet-300 font-medium transition-colors border-b border-violet-400/30 hover:border-violet-300"
+                className="text-violet-400 hover:text-violet-300 font-medium transition-colors link-underline"
               >
-                Studio Numérique
+                XXX
               </a>
               .
             </p>
