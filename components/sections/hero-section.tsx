@@ -106,9 +106,16 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <div className="mt-16 flex justify-center">
+            <div className="mt-16 flex justify-center"
+            onClick={() =>
+              window.scrollTo({
+                top: window.innerHeight,
+                behavior: "smooth",
+              })
+            }
+            >
               <div className="flex items-center gap-2 text-slate-400 animate-bounce">
-                <span className="text-sm">Défiler pour explorer</span>
+                <span className="text-sm">Explorer</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
