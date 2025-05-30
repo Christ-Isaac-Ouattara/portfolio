@@ -15,84 +15,83 @@ import { Button } from "@/components/ui/button";
 
 const featuredProjects = [
   {
-    title: "Thème Halcyon",
+    title: "Agence de services digitales",
     description:
-      "Un thème minimaliste bleu foncé pour VS Code, Sublime Text, Atom, iTerm et plus. Disponible sur Visual Studio Marketplace, Package Control, Atom Package Manager et npm.",
-    tech: ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
-    github: "#",
-    external: "#",
-    image:
-      "https://images.pexels.com/photos/11125185/pexels-photo-11125185.jpeg",
+      "Une agence de services digitales qui propose la création de sites web, la gestion de réseaux sociaux, la création de contenu, la gestion de campagnes de marketing et la création de stratégies de marketing.",
+    tech: ["TypeScript", "React", "Next.js", "MongoDB"],
+    // github: "#",
+    external: "https://lorange.vercel.app/",
+    image: "/img/loragence.png",
   },
   {
-    title: "Profil Spotify",
+    title: "Site web e-commerce",
     description:
-      "Une application web pour visualiser vos données Spotify personnalisées. Consultez vos artistes préférés, vos titres les plus écoutés, vos pistes récemment jouées et des informations audio détaillées sur chaque titre.",
-    tech: ["React", "Styled Components", "Express", "Spotify API", "Heroku"],
-    github: "#",
-    external: "#",
-    image: "https://images.pexels.com/photos/8539548/pexels-photo-8539548.jpeg",
+      "Un site web e-commerce qui permet aux utilisateurs de parcourir et d'acheter des produits en ligne.",
+    tech: ["TypeScript", "React", "Next.js", "MongoDB"],
+    // github: "#",
+    external: "https://snobstore.shop/",
+    image: "/img/snob.png",
   },
   {
-    title: "Guide API Spotify",
+    title: "Site web de contruction et de vente",
     description:
-      "Un guide complet pour construire une application web avec l'API Spotify. Le guide couvre tout, de la configuration d'un environnement de développement au déploiement sur Heroku ou Netlify.",
-    tech: ["React", "Express", "Spotify API", "Styled Components"],
-    github: "#",
-    external: "#",
-    image: "https://images.pexels.com/photos/6693855/pexels-photo-6693855.jpeg",
+      "Un site web pour une entreprise de contruction, d'agriculture et de commerce qui permet aux utilisateurs de parcourir les différents services de l'entreprise et de renseigner un formulaire pour un devis préliminaire gratuit.",
+    tech: ["HTML", "CSS", "JS"],
+    // github: "#",
+    external: "https://groupe-sicab.com/",
+    image: "/img/sicab.png",
   },
 ];
 
 const otherProjects = [
   {
-    title: "Boilerplate WordPress Multisite",
+    title: "Site de restauration",
     description:
-      "Un modèle WordPress multisite avec des plugins personnalisés, optimisé pour l'efficacité de déploiement et la simplicité de maintenance.",
-    tech: ["WordPress", "PHP", "SCSS", "JavaScript"],
+      "Un site de restauration pour un restaurateur qui propose des menus de plats africains en france.",
+    tech: ["TypeScript", "React", "Next.js", "MongoDB"],
     github: "#",
-    external: "#",
+    external: "https://lekemet.vercel.app/",
   },
   {
     title: "Portfolio React",
     description:
-      "Un portfolio moderne construit avec React et Styled Components. Comprend des transitions de page fluides et des animations avancées.",
-    tech: ["React", "TypeScript", "Styled Components", "Framer Motion"],
+      "Un portfolio moderne construit avec React et Next.js. Comprend des transitions de page fluides et des animations légères mais subtiles inspiré de brittany Chiang.",
+    tech: ["TypeScript", "React", "Next.js", "MongoDB", "Gsap"],
     github: "#",
-    external: "#",
+    external: "https://kriscode.tech/",
   },
   {
-    title: "Application de Notes Markdown",
+    title: "Application immobilière",
     description:
-      "Une application de prise de notes Markdown avec aperçu en temps réel, tags et intégration du stockage local.",
-    tech: ["React", "TypeScript", "Redux", "Marked"],
+      "Une application qui permet aux utilisateurs de rechercher des propriétés immobilières, de voir les détails de chaque propriété et de contacter le propriétaire.",
+    tech: ["TypeScript", "React", "Next.js", "MongoDB"],
     github: "#",
-    external: "#",
+    external: "https://https://olympe-zeta.vercel.app/",
   },
-  {
-    title: "Application Météo",
-    description:
-      "Une application météo minimaliste présentant les conditions actuelles et les prévisions sur 5 jours utilisant l'API OpenWeather.",
-    tech: ["JavaScript", "CSS", "HTML", "OpenWeather API"],
-    github: "#",
-    external: "#",
-  },
-  {
-    title: "App de Reconnaissance Faciale",
-    description:
-      "Une application qui détecte les visages dans les images téléchargées en utilisant des API d'apprentissage automatique.",
-    tech: ["React", "Node.js", "Express", "PostgreSQL", "Clarifai API"],
-    github: "#",
-    external: "#",
-  },
-  {
-    title: "Portfolio de Photographie",
-    description:
-      "Un site portfolio minimaliste pour présenter des travaux photographiques avec un accent sur l'affichage d'images et la performance.",
-    tech: ["Next.js", "GSAP", "Tailwind CSS", "Cloudinary"],
-    github: "#",
-    external: "#",
-  },
+  // {
+  //   title: "Application Météo",
+  //   description:
+  //     "Une application météo minimaliste présentant les conditions actuelles et les prévisions sur 5 jours utilisant l'API OpenWeather.",
+  //   tech: ["JavaScript", "CSS", "HTML", "OpenWeather API"],
+  //   github: "#",
+  //   external: "#",
+  // },
+  // {
+  //   title: "App de Reconnaissance Faciale",
+  //   description:
+  //     "Une application qui détecte les visages dans les images téléchargées en utilisant des API d'apprentissage automatique.",
+  //   tech: ["React", "Node.js", "Express", "PostgreSQL", "Clarifai API"],
+  //   github: "#",
+  //   external: "#",
+  // },
+  // {
+  //   title: "Portfolio de Photographie",
+  //   description:
+  //     "Un site portfolio minimaliste pour présenter des travaux photographiques avec un accent sur l'affichage d'images et la performance.",
+  //   tech: ["Next.js", "GSAP", "Tailwind CSS", "Cloudinary"],
+  //   github: "#",
+  //   external: "#",
+  // },
 ];
 
 export function ProjectsSection() {

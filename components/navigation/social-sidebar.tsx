@@ -26,7 +26,7 @@ export function SocialSidebar() {
       <ul className="flex flex-col items-center space-y-6 after:content-[''] after:w-px after:h-24 after:bg-foreground/30 after:mx-auto">
         <li className="social-icon">
           <a
-            href="https://github.com/"
+            href="https://github.com/Christ-Isaac-Ouattara"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-accent transition-colors"
@@ -37,7 +37,7 @@ export function SocialSidebar() {
         </li>
         <li className="social-icon">
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/nafiralo-christ-isaac-konan-ouattara-87a907213/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-accent transition-colors"
@@ -46,7 +46,7 @@ export function SocialSidebar() {
             <Linkedin size={20} />
           </a>
         </li>
-        <li className="social-icon">
+        {/* <li className="social-icon">
           <a
             href="https://twitter.com/"
             target="_blank"
@@ -56,10 +56,10 @@ export function SocialSidebar() {
           >
             <Twitter size={20} />
           </a>
-        </li>
+        </li> */}
         <li className="social-icon">
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/kris_wathara/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-accent transition-colors"

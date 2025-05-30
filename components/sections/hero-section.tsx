@@ -77,13 +77,13 @@ export function HeroSection() {
               Passionné par la création d&apos;interfaces élégantes et
               performantes, je transforme des idées en expériences web
               immersives. Actuellement, je développe des solutions innovantes
-              chez{" "}
-              <a
+              en tant que freelance
+              {/* <a
                 href="#"
                 className="text-violet-400 hover:text-violet-300 font-medium transition-colors link-underline"
               >
                 XXX
-              </a>
+              </a> */}
               .
             </p>
 

@@ -80,7 +80,7 @@ export function AboutSection() {
               <div className="absolute inset-0 border-2 border-accent translate-x-4 translate-y-4 rounded transition-transform duration-300 group-hover:translate-x-2 group-hover:translate-y-2" />
               <div className="relative overflow-hidden rounded-lg border-4 border-white/20 shadow-2xl">
                 <Image
-                  src="https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg"
+                  src="/img/boy.png"
                   alt="Photo de profil"
                   width={500}
                   height={500}
@@ -120,15 +120,8 @@ export function AboutSection() {
                 dans des projets concrets. Travailler dans un environnement en
                 constante évolution, avec des délais serrés et des objectifs
                 ambitieux, m’a appris à gérer la pression, à être réactif et à
-                m’adapter rapidement. Aujourd’hui, je mets mes compétences au
-                service de{" "}
-                <a
-                  href="#"
-                  className="text-violet-300 font-medium hover:text-violet-200 link-underline border-violet-300/30"
-                >
-                  XXX
-                </a>
-                , où je me concentre sur la conception de sites internet et
+                m’adapter rapidement. Aujourd’hui, je développe des solutions innovantes
+                en tant que freelance, où je me concentre sur la conception de sites internet et
                 d’applications web modernes, performants et centrés sur
                 l’utilisateur.
               </p>
