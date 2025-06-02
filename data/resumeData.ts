@@ -16,6 +16,33 @@ interface Experience {
 }
 
 export const projects: Project[] = [
+    {
+    name: "Portfolio React",
+    link: "https://kriscode.tech/",
+    image: "/img/portfolio.png",
+    range: "Mai 2025",
+    description:
+      "Un portfolio moderne construit avec React et Next.js. Comprend des transitions de page fluides et des animations légères mais subtiles inspiré de brittany Chiang.",
+    technologies: ["TypeScript", "React", "Next.js", "MongoDB", "Gsap"],
+  },
+  {
+    name: "Refonte de site web de restauration",
+    link: "https://lekemet.vercel.app/",
+    image: "/img/kemet.png",
+    range: "Mai 2025",
+    description:
+      "Un site web de restauration pour un restaurateur qui propose des menus de plats africains en france.",
+    technologies: ["TypeScript", "React", "Next.js", "MongoDB"],
+  },
+  {
+    name: "Site web e-commerce",
+    link: "https://snobstore.shop/",
+    image: "/img/snob.png",
+    range: "Avril 2025 - Present",
+    description:
+      "Un site web e-commerce qui permet aux utilisateurs de parcourir et d'acheter des produits en ligne.",
+    technologies: ["TypeScript", "React", "Next.js", "MongoDB"],
+  },
   {
     name: "Application immobilière",
     link: "https://olympe-zeta.vercel.app/",
@@ -43,49 +70,13 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Site web e-commerce",
-    link: "https://snobstore.shop/",
-    image: "/img/snob.png",
-    range: "Mars 2025 - Present",
-    description:
-      "Un site web e-commerce qui permet aux utilisateurs de parcourir et d'acheter des produits en ligne.",
-    technologies: ["TypeScript", "React", "Next.js", "MongoDB"],
-  },
-  {
     name: "Site web de contruction",
     link: "https://groupe-sicab.com/",
     image: "/img/sicab.png",
-    range: "Mars 2025 - Present",
+    range: "Aout 2024",
     description:
       "Un site web pour une entreprise de contruction, d'agriculture et de commerce qui permet aux utilisateurs de parcourir les différents services de l'entreprise et de renseigner un formulaire pour un devis préliminaire gratuit.",
     technologies: ["HTML", "CSS", "JS"],
-  },
-  {
-    name: "Refonte de site web de restauration",
-    link: "https://lekemet.vercel.app/",
-    image: "/img/kemet.png",
-    range: "Mars 2025 - Present",
-    description:
-      "Un site web de restauration pour un restaurateur qui propose des menus de plats africains en france.",
-    technologies: ["TypeScript", "React", "Next.js", "MongoDB"],
-  },
-  {
-    name: "Portfolio React",
-    link: "https://kriscode.tech/",
-    image: "/img/portfolio.png",
-    range: "Mars 2025 - Present",
-    description:
-      "Un portfolio moderne construit avec React et Next.js. Comprend des transitions de page fluides et des animations légères mais subtiles inspiré de brittany Chiang.",
-    technologies: ["TypeScript", "React", "Next.js", "MongoDB", "Gsap"],
-  },
-  {
-    name: "Portfolio de Photographie",
-    link: "https://www.finteck.aigle.fr/",
-    image: "/img/finteck.png",
-    range: "Mars 2025 - Present",
-    description:
-      "Un site portfolio minimaliste pour présenter des travaux photographiques avec un accent sur l'affichage d'images et la performance.",
-    technologies: ["Next.js", "GSAP", "Tailwind CSS", "Cloudinary"],
   },
 ];
 export const experiences: Experience[] = [
