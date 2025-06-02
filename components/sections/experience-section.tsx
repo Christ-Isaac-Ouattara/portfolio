@@ -21,7 +21,7 @@ const experiences: JobExperience[] = [
       "Création d’un site de vente en ligne avec gestion des stocks, des commandes et intégration des paiements en ligne avec React, Typescript, Node.js, Next.js, MongoDB",
       "Site vitrine avec demande de devis pour une entreprise de construction : Développement d’un site permettant de présenter les services de l’entreprise et de faciliter les demandes de devis en ligne avec HTML, CSS, Javascript",
       "Création d'un site d'une agence web de création d'application web et mobile avec React, Typescript, Node.js, Next.js, MongoDB",
-      "Leadership au sein du département d'ingénierie par une collaboration étroite, des partages de connaissances et du mentorat"
+      // "Leadership au sein du département d'ingénierie par une collaboration étroite, des partages de connaissances et du mentorat"
     ]
   },
   {

@@ -1,6 +1,8 @@
 interface Project {
   name: string;
   link: string;
+  image: string;
+  range: string;
   description: string;
   technologies: string[];
 }
@@ -13,6 +15,79 @@ interface Experience {
   projects: Project[];
 }
 
+export const projects: Project[] = [
+  {
+    name: "Application immobilière",
+    link: "https://olympe-zeta.vercel.app/",
+    image: "/img/olympe.png",
+    range: "Mars 2025 - Present",
+    description:
+      "Une application qui permet aux utilisateurs de rechercher des propriétés immobilières, de voir les détails de chaque propriété et de contacter le propriétaire.",
+    technologies: ["TypeScript", "React", "Next.js", "MongoDB"],
+  },
+  {
+    name: "Application de santé en ligne",
+    link: "https://santeplus.vercel.app/",
+    image: "/img/santeplus.png",
+    range: "Mars 2025 - Present",
+    description:
+      "Une application de santé qui permet de faire des consultations préliminaire en ligne, de recevoir des ordonnance digitales en ligne et de pouvoir commander ses medicaments et les recevoir chez soi rapidement et en sécurité.",
+    technologies: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "MongoDB",
+      "PostgreSQL",
+      "Express.js",
+      "Node.js",
+    ],
+  },
+  {
+    name: "Site web e-commerce",
+    link: "https://snobstore.shop/",
+    image: "/img/snob.png",
+    range: "Mars 2025 - Present",
+    description:
+      "Un site web e-commerce qui permet aux utilisateurs de parcourir et d'acheter des produits en ligne.",
+    technologies: ["TypeScript", "React", "Next.js", "MongoDB"],
+  },
+  {
+    name: "Site web de contruction",
+    link: "https://groupe-sicab.com/",
+    image: "/img/sicab.png",
+    range: "Mars 2025 - Present",
+    description:
+      "Un site web pour une entreprise de contruction, d'agriculture et de commerce qui permet aux utilisateurs de parcourir les différents services de l'entreprise et de renseigner un formulaire pour un devis préliminaire gratuit.",
+    technologies: ["HTML", "CSS", "JS"],
+  },
+  {
+    name: "Refonte de site web de restauration",
+    link: "https://lekemet.vercel.app/",
+    image: "/img/kemet.png",
+    range: "Mars 2025 - Present",
+    description:
+      "Un site web de restauration pour un restaurateur qui propose des menus de plats africains en france.",
+    technologies: ["TypeScript", "React", "Next.js", "MongoDB"],
+  },
+  {
+    name: "Portfolio React",
+    link: "https://kriscode.tech/",
+    image: "/img/portfolio.png",
+    range: "Mars 2025 - Present",
+    description:
+      "Un portfolio moderne construit avec React et Next.js. Comprend des transitions de page fluides et des animations légères mais subtiles inspiré de brittany Chiang.",
+    technologies: ["TypeScript", "React", "Next.js", "MongoDB", "Gsap"],
+  },
+  {
+    name: "Portfolio de Photographie",
+    link: "https://www.finteck.aigle.fr/",
+    image: "/img/finteck.png",
+    range: "Mars 2025 - Present",
+    description:
+      "Un site portfolio minimaliste pour présenter des travaux photographiques avec un accent sur l'affichage d'images et la performance.",
+    technologies: ["Next.js", "GSAP", "Tailwind CSS", "Cloudinary"],
+  },
+];
 export const experiences: Experience[] = [
   {
     period: "Juin 2024 — Décembre 2024",
@@ -23,18 +98,24 @@ export const experiences: Experience[] = [
       {
         name: "Transfert d’argent inter Mobile Money et entre pays africains",
         link: "https://www.finteck.aigle.fr/",
+        image: "/img/finteck.png",
+        range: "Mars 2025 - Present",
         description: "Mise en place d’une plateforme de transfert sécurisé avec un wallet numérique permettant aussi l’achat de pass internet et crédit d’appel.",
         technologies: ["TypeScript", "React.js", "Node.js", "Adonis.js", "SQL"]
       },
       {
         name: "Demande d’actes d’état civil",
         link: "https://www.finteck.aigle.fr/",
+        image: "/img/finteck.png",
+        range: "Mars 2025 - Present",
         description: "Conception du frontend d’un site facilitant la demande et le suivi des actes administratifs auprès des mairies en Côte d’Ivoire.",
         technologies: ["Javascript", "React.js"]
       },
       {
         name: "Gestion des comptes bancaires et crédits",
         link: "https://www.finteck.aigle.fr/",
+        image: "/img/finteck.png",
+        range: "Mars 2025 - Present",
         description: "Création d'un portail pour l'ouverture de comptes et la demande de crédits avec suivi des dossiers en temps réel.",
         technologies: ["Javascript", "React.js", "Node.js", "Express.js", "MongoDB"]
       },
@@ -42,12 +123,16 @@ export const experiences: Experience[] = [
       {
         name: "Gestion des églises et dons",
         link: "https://www.finteck.aigle.fr/",
+        image: "/img/finteck.png",        
+        range: "Mars 2025 - Present",
         description: "Développement d’un site pour la gestion des dons, événements et annonces d’églises, avec paiement en ligne intégré.",
         technologies: ["Javascript", "React.js", "Node.js", "Express.js", "MongoDB"]
       },
       {
         name: "Plateforme E-commerce",
         link: "https://www.finteck.aigle.fr/",
+        image: "/img/finteck.png",
+        range: "Mars 2025 - Present",
         description: "Développement d'un site permettant aux commerçants de créer et gérer leur boutique en ligne avec intégration des paiements en ligne locaux.",
         technologies: ["Javascript", "React.js", "Node.js", "Express.js", "MongoDB"]
       },

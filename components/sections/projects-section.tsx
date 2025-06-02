@@ -282,12 +282,12 @@ export function ProjectsSection() {
             <h3 className="text-3xl font-bold text-white mb-2">
               Autres Projets Intéressants
             </h3>
-            <a
+            <Link
               href="#"
               className="inline-block text-violet-400 mb-10 border-b border-violet-400/30 hover:border-violet-400 transition-colors font-mono"
             >
               voir les archives
-            </a>
+            </Link>
           </div>
 
           <div className="other-projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -364,7 +364,7 @@ export function ProjectsSection() {
               className="bg-transparent hover:bg-violet-500/10 text-violet-400 border-2 border-violet-400 rounded-full px-8 py-6 font-medium transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/20 hover:-translate-y-1"
               asChild
             >
-              <a href="#">Voir Plus de Projets</a>
+              <Link href="/resume">Voir Plus de Projets</Link>
             </Button>
           </div>
         </div>

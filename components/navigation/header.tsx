@@ -69,7 +69,7 @@ export function Header() {
         isScrolled ? "bg-background/90 backdrop-blur-sm shadow-md" : "bg-transparent"
       )}>
         <div className="flex items-center justify-between">
-          <Link href="/" className="logo font-bold text-2xl text-accent">
+          <Link href="/" className="logo font-bold text-2xl text-violet-400">
             <img src="/logo.png" alt="Logo" className="w-12 h-6" />
           </Link>
           
@@ -80,8 +80,8 @@ export function Header() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "text-sm font-medium transition-colors hover:text-accent",
-                      activeSection === item.href ? "text-accent" : "text-muted-foreground"
+                      "text-sm font-medium transition-colors hover:text-violet-400",
+                      activeSection === item.href ? "text-violet-400" : "text-muted-foreground"
                     )}
                   >
                     {item.name}
@@ -93,7 +93,7 @@ export function Header() {
             <Button 
               variant="outline" 
               size="sm" 
-              className="resume-button border-accent text-accent hover:bg-accent/10"
+              className="resume-button border-violet-400 text-violet-400 hover:bg-violet-400/10"
               asChild
             >
               <a href="/cv-isaac-ouattara.pdf" target="_blank" rel="noopener noreferrer">
@@ -150,9 +150,9 @@ export function Header() {
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={cn(
-                      "text-lg font-medium transition-colors hover:text-accent block w-full py-2",
+                      "text-lg font-medium transition-colors hover:text-violet-400 block w-full py-2",
                       activeSection === item.href
-                        ? "text-accent"
+                        ? "text-violet-400"
                         : "text-muted-foreground"
                     )}
                   >
@@ -165,7 +165,7 @@ export function Header() {
             <Button
               variant="outline"
               size="lg"
-              className="mobile-nav-item mt-8 border-accent text-accent hover:bg-accent/10 w-full"
+              className="mobile-nav-item mt-8 border-violet-400 text-violet-400 hover:bg-violet-400/10 w-full"
               asChild
             >
               <a href="/cv-isaac-ouattara.pdf" target="_blank" rel="noopener noreferrer">

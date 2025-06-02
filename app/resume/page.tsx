@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { experiences } from "@/data/resumeData";
+import { experiences, projects } from "@/data/resumeData";
 // Définition des sections du CV
 const sections = [
   { id: "summary", title: "A propos " },
@@ -289,10 +289,16 @@ export default function ResumePage() {
                 A propos de moi
               </h2>
               <p className="text-muted-foreground">
-                Développeur web fullstack passionné et créatif, je conçois des sites et applications web accessibles, performants et centrés sur l’utilisateur.
-Fort d’une solide expérience en développement frontend et backend, je maîtrise les technologies modernes telles que JavaScript, TypeScript, Node.js et React. 
-Je porte une attention particulière à la conception d’interfaces intuitives et à l’optimisation de l’expérience utilisateur.
-Curieux et rigoureux, j’ai la capacité d’intégrer rapidement de nouveaux outils et frameworks pour répondre efficacement aux besoins des projets.
+                Développeur web fullstack passionné et créatif, je conçois des
+                sites et applications web accessibles, performants et centrés
+                sur l’utilisateur. Fort d’une solide expérience en développement
+                frontend et backend, je maîtrise les technologies modernes
+                telles que JavaScript, TypeScript, Node.js et React. Je porte
+                une attention particulière à la conception d’interfaces
+                intuitives et à l’optimisation de l’expérience utilisateur.
+                Curieux et rigoureux, j’ai la capacité d’intégrer rapidement de
+                nouveaux outils et frameworks pour répondre efficacement aux
+                besoins des projets.
               </p>
             </section>
 
@@ -459,46 +465,70 @@ Curieux et rigoureux, j’ai la capacité d’intégrer rapidement de nouveaux o
               </h2>
 
               <div className="grid gap-2">
-                <div className="flex justify-between items-start">
+                {projects.slice(0, 6).map((project, index) => (
+                  <div key={index} className="space-y-2 mb-4 flex flex-col lg:flex-row justify-between items-start">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full h:64 lg:w-52 lg:h-20 rounded-md object-cover transition-transform duration-700 hover:scale-110"
+                    />
+                    <div className="lg:ml-4 space-y-2">
+                      <div className="flex flex-col lg:flex-row justify-between items-start">
+                        <h3 className="font-medium">{project.name}</h3>
+                        <span className="text-muted-foreground text-sm">
+                          {project.range}
+                        </span>
+                      </div>
+                      <p className="text-muted-foreground">
+                        {project.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+                {/* <div className="flex justify-between items-start">
                   <img
-                    src="https://images.unsplash.com/photo-1537884944318-390069bb8665"
+                    src="/img/santeplus.png"
                     alt="Project 2"
                     className="w-52 h-20 rounded-md object-cover transition-transform duration-700 hover:scale-110"
                   />
                   <div className="ml-4">
                     <div className="flex justify-between items-start">
-                      <h3 className="font-medium">Project 1</h3>
+                      <h3 className="font-medium">
+                        Application de santé en ligne
+                      </h3>
                       <span className="text-muted-foreground text-sm">
-                        2022 - Present
+                        Mars 2025 - Present
                       </span>
                     </div>
                     <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Quisque in pretium turpis. Nullam eget metus eu erat
-                      feugiat aliquet.
+                      Une application de santé qui permet de faire des consultations préliminaire en ligne, de recevoir des ordonnance digitales en ligne et de pouvoir commander ses medicaments et les recevoir chez soi rapidement et en sécurité.
                     </p>
                   </div>
                 </div>
                 <div className="flex justify-between items-start">
                   <img
-                    src="https://images.unsplash.com/photo-1537884944318-390069bb8665"
-                    alt="Project 1"
+                    src="/img/olympe.png"
+                    alt="snob"
                     className="w-52 h-20 rounded-md object-cover transition-transform duration-700 hover:scale-110"
                   />
                   <div className="ml-4">
                     <div className="flex justify-between items-start">
-                      <h3 className="font-medium">Project 2</h3>
+                      <h3 className="font-medium">
+                        Application d&apos;annonce immobiliare
+                      </h3>
                       <span className="text-muted-foreground text-sm">
-                        2022 - Present
+                        Mars 2025 - Present
                       </span>
                     </div>{" "}
                     <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Quisque in pretium turpis. Nullam eget metus eu erat
-                      feugiat aliquet.
+                      Une application qui permet aux utilisateurs de rechercher
+                      des propriétés immobilières, de voir les détails de chaque
+                      propriété, de pouvoir vendre ou louer leur bien, de
+                      pouvoir acheter ou louer un bien, et de contacter le
+                      propriétaire.
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
 
@@ -512,61 +542,31 @@ Curieux et rigoureux, j’ai la capacité d’intégrer rapidement de nouveaux o
                 Autres Projets notables
               </h2>
               <div className="grid gap-2">
-                <div className="flex justify-between items-start">
+                <div className="space-y-2 mb-4 flex flex-col lg:flex-row justify-between items-start">
                   <img
-                    src="https://images.unsplash.com/photo-1537884944318-390069bb8665"
+                    src="/img/loragence.png"
                     alt="Project 3"
-                    className="w-52 h-20 rounded-md object-cover transition-transform duration-700 hover:scale-110"
+                    className="w-full h:64 lg:w-52 lg:h-20 rounded-md object-cover transition-transform duration-700 hover:scale-110"
                   />
-                  <div className="ml-4">
-                    <div className="flex justify-between items-start">
-                      <h3 className="font-medium">Project 3</h3>
+                  <div className="lg:ml-4 space-y-2">
+                    <div className="flex flex-col lg:flex-row justify-between items-start">
+                      <h3 className="font-medium">
+                        Agence de services digitaux
+                      </h3>
                       <span className="text-muted-foreground text-sm">
-                        2022 - Present
+                        Avril 2025
                       </span>
                     </div>{" "}
                     <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Quisque in pretium turpis. Nullam eget metus eu erat
-                      feugiat aliquet.
+                      Une agence de services digitales qui propose la création
+                      de sites web, la gestion de réseaux sociaux, la création
+                      de contenu, la gestion de campagnes de marketing et la
+                      création de stratégies de marketing.
                     </p>
                   </div>
                 </div>
               </div>
             </section>
-            {/* Contact */}
-            {/* <section
-              id="contact"
-              ref={(el) => (sectionRefs.current.contact = el)}
-              className="scroll-mt-24"
-            >
-              <h2 className="heading-sm mb-4 sticky top-[65px] md:top-6 md:bg-transparent bg-background/90 backdrop-blur-sm py-2 z-30">
-                Contact
-              </h2>
-              <div className="grid gap-2">
-                <div className="flex justify-between items-start">
-                  <h3 className="font-medium">Email</h3>
-                  <span className="text-muted-foreground text-sm">
-                    ouattaraisaacpro@gmail.com
-                  </span>
-                </div>
-                <p className="text-muted-foreground">
-                  Email address for general inquiries
-                </p>
-              </div>
-
-              <div className="grid gap-2">
-                <div className="flex justify-between items-start">
-                  <h3 className="font-medium">Phone</h3>
-                  <span className="text-muted-foreground text-sm">
-                    (123) 456-7890
-                  </span>
-                </div>
-                <p className="text-muted-foreground">
-                  Phone number for emergencies
-                </p>
-              </div>
-            </section> */}
           </div>
         </div>
       </div>
