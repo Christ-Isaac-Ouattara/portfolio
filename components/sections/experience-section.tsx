@@ -85,14 +85,14 @@ export function ExperienceSection() {
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-indigo-500/5 rounded-full blur-3xl"></div>
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-violet-500/10 rounded-full blur-xl"></div> */}
       
-      <div className="section-content max-w-5xl mx-auto relative z-10">
+      <div className="section-content lg:max-w-5xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1  text-white rounded-full text-lg font-mono mb-4 numbered-heading">Expérience</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Mon Parcours Professionnel</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-violet-500 to-indigo-500 mx-auto"></div>
         </div>
         
-        <div className="mt-12 max-w-4xl mx-auto  p-8 ">
+        <div className="mt-12 lg:max-w-4xl mx-auto lg:p-8 ">
           <Tabs 
             defaultValue="0" 
             value={activeTab} 

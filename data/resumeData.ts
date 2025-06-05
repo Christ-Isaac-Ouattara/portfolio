@@ -136,7 +136,6 @@ export const experiences: Experience[] = [
           "MongoDB",
         ],
       },
-
       {
         name: "Gestion des églises et dons",
         link: "https://www.finteck.aigle.fr/",
