@@ -80,7 +80,7 @@ export function AboutSection() {
               <div className="absolute inset-0 border-2 border-accent translate-x-4 translate-y-4 rounded transition-transform duration-300 group-hover:translate-x-2 group-hover:translate-y-2" />
               <div className="relative overflow-hidden rounded-lg border-4 border-white/20 shadow-2xl">
                 <Image
-                  src="/img/boy.png"
+                  src="/profile.jpg"
                   alt="Photo de profil"
                   width={500}
                   height={500}
