@@ -12,7 +12,29 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Christ Isaac Ouattara's portfolio",
+  description: "Nafiralo Christ Isaac Ouattara's portfolio",
+  keywords: [
+    "Nafiralo",
+    "Christ Isaac",
+    "Ouattara",
+    "Portfolio",
+    "Isaac Ouattara",
+    "Ouattara Nafiralo Christ Isaac Konan",
+    "Software Developer",
+    "Software Engineer",
+    "Web Developer",
+    "Web Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Full Stack Developer",
+    "React Developer",
+    "React Native Developer",
+    "Next Js Developer",
+    "Express Js Developer",
+    "Node Js Developer",
+    "MERN Stack Developer",
+    "Freelance Developer",
+  ],
 };
 
 export default function RootLayout({
